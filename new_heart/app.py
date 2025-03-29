@@ -4,7 +4,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 # Set page configuration
-st.set_page_config(page_title="Ogunbanwo A.S",
+st.set_page_config(page_title="Heart Disease",
                    layout="wide",
                    page_icon="🧑‍⚕️")
 
@@ -22,11 +22,11 @@ parkinsons_model = pickle.load(open(f'{working_dir}/saved_models/parkinsons_mode
 
 # sidebar for navigation
 with st.sidebar:
-    selected = option_menu('Multiple Disease Prediction System, by Ogunbanwo A.S',
+    selected = option_menu('Heart Disease Detection System',
 
-                           ['Diabetes Prediction',
+                           [
                             'Heart Disease Prediction',
-                            'Parkinsons Prediction'],
+                            ],
                            menu_icon='hospital-fill',
                            icons=['activity', 'heart', 'person'],
                            default_index=0)
